@@ -20,16 +20,6 @@ Code Block
 
 ![Image](https://via.placeholder.com/150)
   `;
-
-    renderer.paragraph = function (text) {
-        return `<p>${text.replace(/\n/g, '<br>')}</p>`;
-    };
-
-    // Update marked options to use the custom renderer
-    marked.setOptions({
-        renderer: renderer
-    });
-
     // Set default content in the editor and preview
     $('#editor').val(defaultMarkdown);
     $('#preview').html(marked.parse(defaultMarkdown));
